@@ -1,0 +1,32 @@
+{
+  "name": "library-html-scss-js",
+  "author": "NatureSL",
+  "private": true,
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.6",
+    "@babel/preset-env": "^7.22.6",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "css-loader": "^6.8.1",
+    "html-bundler-webpack-plugin": "^1.8.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-loader": "^7.3.3",
+    "robotstxt-webpack-plugin": "^8.0.0",
+    "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
