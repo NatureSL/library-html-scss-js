@@ -2,3 +2,135 @@
 html{
     background: wheat;
 }
+.nav {
+    background-color: $main-black-color;
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 9rem;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      column-gap: 4rem;
+    }
+  
+    &__logo {
+      text-decoration: none;
+      color: $main-white-color;
+      text-align: center;
+      font-family: $forum;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 5rem; /* 166.667% */
+      letter-spacing: 0.06rem;
+    }
+  
+    &__icon {
+      cursor: pointer;
+      padding: 0rem;
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 4rem;
+  
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 3rem;
+    }
+  
+    &__list-item {
+      & a {
+        font-size: 2rem;
+        font-family: $inter;
+        color: $main-white-color;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 5rem; /* 250% */
+      }
+    }
+    &__link:after {
+      display: block;
+      position: relative;
+      right: -100%;
+      top: 0.5rem;
+      width: 0;
+      height: 0.2rem;
+      background-color: $main-white-color;
+      content: "";
+      transition: all 0.5s ease-out;
+      transform: rotate(180deg); /* Поворачиваем псевдоэлемент на 45 градусов */
+      transform-origin: left; /* Устанавливаем точку, относительно которой происходит поворот */
+    }
+    &__link:hover::after {
+      width: 100%;
+    }
+  }
+  
+  .welcome-section {
+    background: url("../../assets/img/Welcome.png");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    position: relative;
+    &__overlay {
+      background: linear-gradient(
+        180deg,
+        $main-black-color 0%,
+        $main-black-color 0.01%,
+        rgba(18, 18, 21, 0.1) 100%,
+        rgba(18, 18, 21, 0.1) 100%
+      );
+      position: absolute; /* Абсолютное позиционирование градиента внутри элемента */
+      top: 0; /* Размещаем градиент вверху элемента */
+      left: 0;
+      right: 0;
+      bottom: 50%; /* Ограничиваем высоту градиента до верхней половины элемента (50%) */
+    }
+  
+    &__bg {
+      position: relative;
+      display: inline-flex;
+      top: 22rem;
+      left: -2rem;
+      background-color: $main-black-color;
+      padding: 3.5rem 4rem;
+    }
+    &__title {
+      width: 52rem;
+      height: 15rem;
+      color: $main-white-color;
+      font-size: 4rem;
+      text-transform: uppercase;
+      text-align: center;
+      color: $main-white-color;
+      font-family: $forum;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 5rem; /* 125% */
+      letter-spacing: 0.3rem;
+    }
+    &__nav-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 69px;
+      align-items: center;
+    }
+  }
+  

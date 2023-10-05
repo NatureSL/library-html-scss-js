@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'ForumT';
+    src: url("../../assets/fonts/Forum/Forum-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'InterT';
+    src: url("../../assets/fonts/Inter/Inter-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'InterT';
+    src: url("../../assets/fonts/Inter/Inter-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  // module export
+  $forum: ForumT, sans-serif;
+  $inter: InterT, sans-serif;

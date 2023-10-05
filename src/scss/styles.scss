@@ -1,5 +1,28 @@
-@import './abstract/normalize'; 
+@import './abstract/normalize';
 @import './abstract/fonts';
 @import './abstract/constants';
 @import './abstract/mixin';
 @import './abstract/placeholder';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    color: $main-black-color;
+}
+.root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
