@@ -11,16 +11,95 @@
         <link rel="stylesheet" href="style.scss" />
     </head>
     <body>
-        <header>
-            <div class="logo"><h1>Library</h1></div>
-            <ul>
-                <li></li>
-            </ul>
-        </header>
-        <main class="container">
-            <section></section>
-        </main>
-        <footer></footer>
+        <div class="root">
+            <header class="nav">
+                <!--container nav-menu-->
+                <div id="main" class="container nav__container">
+                    <!-- nav menu-->
+                    <div class="nav__logo-box">
+                        <a href="#" class="nav__logo">Brooklyn Public Library</a>
+                    </div>
+                    <nav class="nav__content">
+                        <div class="nav-menu">
+                            <ul class="nav-menu__list">
+                                <li class="nav-menu__list-item">
+                                    <a class="nav-menu__link" href="#about">About</a>
+                                </li>
+                                <li class="nav-menu__list-item">
+                                    <a class="nav-menu__link" href="#favorites">Favorites</a>
+                                </li>
+                                <li class="nav-menu__list-item">
+                                    <a class="nav-menu__link" href="#coffeeShop">Coffee shop</a>
+                                </li>
+                                <li class="nav-menu__list-item">
+                                    <a class="nav-menu__link" href="#contacts">Contacts</a>
+                                </li>
+                                <li class="nav-menu__list-item">
+                                    <a class="nav-menu__link" href="#libraryCard">Library Card</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav__icon">
+                            <span class="nav__icon-login"></span>
+                            <img class="nav__icon-img" src="../../assets/img/icons/icon_profile.png" alt="profile" />
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <section id="welcome" class="welcome-section">
+                  <div class="welcome-section__overlay"></div>
+                  <div class="welcome-section__container container">
+                    <div class="welcome-section__bg">
+                      <h2 class="welcome-section__title">
+                        Welcome <br />
+                        to the Brooklyn <br />Library
+                      </h2>
+                    </div>
+                  </div>
+                </section>
+                <section id="about" class="about-section">
+                  <div class="container about-section__container">
+                    <div class="about-section__title title">
+                      <h2 class="title__text">About</h2>
+                      <div class="title__hr"></div>
+                    </div>
+                    <p class="about-section__text description-text">
+                      The Brooklyn Library is a free workspace, a large number of books
+                      and a cozy coffee shop inside
+                    </p>
+        
+                    <!-- Slider container -->
+                    <div class="slider about-section__slider">
+                      <div class="slider-wrapper">
+                        <div class="slider-slide">
+                          <img src="../../assets/img/slider-image1.png" alt="slider1" />
+                        </div>
+                        <div class="slider-slide">
+                          <img src="../../assets/img/slider-image2.png" alt="slider2" />
+                        </div>
+                        <div class="slider-slide">
+                          <img src="../../assets/img/slider-image3.png" alt="slider3" />
+                        </div>
+                        <div class="slider-slide">
+                          <img src="../../assets/img/slider-image4.png" alt="slider4" />
+                        </div>
+                        <div class="slider-slide">
+                          <img src="../../assets/img/slider-image5.png" alt="slider5" />
+                        </div>
+                      </div>
+                      <div class="slider-button-next"></div>
+                      <div class="slider-button-prev"></div>
+                      <div class="slider-pagination"></div>
+                    </div>
+                  </div>
+                </section>
+            <footer>
+
+            </footer>
+        </div>
+
+        
         <script src="index.js"></script>
     </body>
 </html>
