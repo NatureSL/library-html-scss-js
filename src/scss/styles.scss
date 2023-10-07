@@ -4,6 +4,11 @@
 @import './abstract/mixin';
 @import './abstract/placeholder';
 
+/**
+*   BASE
+*/
+@import './base/swiper-slider.scss';
+
 * {
     padding: 0;
     margin: 0;

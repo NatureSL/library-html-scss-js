@@ -1,87 +1,85 @@
 @import '../../scss/styles.scss';
-html{
-    background: wheat;
-}
+
 .nav {
     background-color: $main-black-color;
     &__container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      height: 9rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 9rem;
     }
     &__content {
-      display: flex;
-      align-items: center;
-      column-gap: 4rem;
+        display: flex;
+        align-items: center;
+        column-gap: 4rem;
     }
-  
+
     &__logo {
-      text-decoration: none;
-      color: $main-white-color;
-      text-align: center;
-      font-family: $forum;
-      font-size: 3rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 5rem; /* 166.667% */
-      letter-spacing: 0.06rem;
+        text-decoration: none;
+        color: $main-white-color;
+        text-align: center;
+        font-family: $forum;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 5rem; /* 166.667% */
+        letter-spacing: 0.06rem;
     }
-  
+
     &__icon {
-      cursor: pointer;
-      padding: 0rem;
-      width: 28px;
-      height: 28px;
+        cursor: pointer;
+        padding: 0rem;
+        width: 28px;
+        height: 28px;
     }
-  }
-  .nav-menu {
+}
+.nav-menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     column-gap: 4rem;
-  
+
     &__list {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      column-gap: 3rem;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 3rem;
     }
-  
+
     &__list-item {
-      & a {
-        font-size: 2rem;
-        font-family: $inter;
-        color: $main-white-color;
-        text-decoration: none;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 5rem; /* 250% */
-      }
+        & a {
+            font-size: 2rem;
+            font-family: $inter;
+            color: $main-white-color;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 5rem; /* 250% */
+        }
     }
     &__link:after {
-      display: block;
-      position: relative;
-      right: -100%;
-      top: 0.5rem;
-      width: 0;
-      height: 0.2rem;
-      background-color: $main-white-color;
-      content: "";
-      transition: all 0.5s ease-out;
-      transform: rotate(180deg); /* Поворачиваем псевдоэлемент на 45 градусов */
-      transform-origin: left; /* Устанавливаем точку, относительно которой происходит поворот */
+        display: block;
+        position: relative;
+        right: -100%;
+        top: 0.5rem;
+        width: 0;
+        height: 0.2rem;
+        background-color: $main-white-color;
+        content: '';
+        transition: all 0.5s ease-out;
+        transform: rotate(180deg); /* Поворачиваем псевдоэлемент на 45 градусов */
+        transform-origin: left; /* Устанавливаем точку, относительно которой происходит поворот */
     }
     &__link:hover::after {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  .welcome-section {
-    background: url("../../assets/img/Welcome.png");
+}
+
+.welcome-section {
+    background: url('../../assets/img/Welcome.png');
     background-size: cover;
     overflow: hidden;
     background-position: center center;
@@ -89,48 +87,270 @@ html{
     min-height: 600px;
     position: relative;
     &__overlay {
-      background: linear-gradient(
-        180deg,
-        $main-black-color 0%,
-        $main-black-color 0.01%,
-        rgba(18, 18, 21, 0.1) 100%,
-        rgba(18, 18, 21, 0.1) 100%
-      );
-      position: absolute; /* Абсолютное позиционирование градиента внутри элемента */
-      top: 0; /* Размещаем градиент вверху элемента */
-      left: 0;
-      right: 0;
-      bottom: 50%; /* Ограничиваем высоту градиента до верхней половины элемента (50%) */
+        background: linear-gradient(
+            180deg,
+            $main-black-color 0%,
+            $main-black-color 0.01%,
+            rgba(18, 18, 21, 0.1) 100%,
+            rgba(18, 18, 21, 0.1) 100%
+        );
+        position: absolute; /* Абсолютное позиционирование градиента внутри элемента */
+        top: 0; /* Размещаем градиент вверху элемента */
+        left: 0;
+        right: 0;
+        bottom: 50%; /* Ограничиваем высоту градиента до верхней половины элемента (50%) */
     }
-  
+
     &__bg {
-      position: relative;
-      display: inline-flex;
-      top: 22rem;
-      left: -2rem;
-      background-color: $main-black-color;
-      padding: 3.5rem 4rem;
+        position: relative;
+        display: inline-flex;
+        top: 22rem;
+        left: -2rem;
+        background-color: $main-black-color;
+        padding: 3.5rem 4rem;
     }
     &__title {
-      width: 52rem;
-      height: 15rem;
-      color: $main-white-color;
-      font-size: 4rem;
-      text-transform: uppercase;
-      text-align: center;
-      color: $main-white-color;
-      font-family: $forum;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 5rem; /* 125% */
-      letter-spacing: 0.3rem;
+        width: 52rem;
+        height: 15rem;
+        color: $main-white-color;
+        font-size: 4rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: $main-white-color;
+        font-family: $forum;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 5rem; /* 125% */
+        letter-spacing: 0.3rem;
     }
     &__nav-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 69px;
-      align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 69px;
+        align-items: center;
     }
-  }
-  
+}
+
+.about-section {
+    &__container {
+        padding-top: 2rem;
+    }
+    &__title {
+        margin-bottom: 4rem;
+    }
+    &__text {
+        margin-bottom: 2rem;
+    }
+    &__slider {
+        margin-bottom: 3rem;
+    }
+}
+.title {
+    &__text {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        color: $main-black-color;
+        font-family: $forum;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4rem; /* 100% */
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+    }
+    &__hr {
+        margin: 0 auto;
+        max-width: 5rem;
+        border-top: 1px solid $main-black-color;
+    }
+}
+.description-text {
+    color: $black-color-text;
+    font-family: $inter;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+.favorites-section {
+    min-height: 1440px;
+    &__title {
+        padding-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    &__radio-box {
+        margin-bottom: 4rem;
+    }
+}
+.books-wrapper {
+    display: flex;
+    column-gap: 22rem;
+    justify-content: center;
+    row-gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    max-width: 100%;
+    visibility: hidden;
+}
+input[type='radio'] {
+    accent-color: $main-black-color;
+    cursor: pointer;
+}
+.radio {
+    &__pick {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $black-color-text;
+        margin-bottom: 4rem;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        margin-right: 2rem;
+    }
+
+    &__lable {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    &__lable_active {
+        font-weight: 700;
+    }
+}
+
+.book {
+    &__container {
+        width: 59rem;
+        height: 55.5rem;
+        position: relative;
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &__content {
+        max-width: 55rem;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $black-color-text;
+        padding-left: 2rem;
+    }
+    &__img {
+        position: absolute;
+        top: calc(100% - 300px);
+        left: calc(100% - 201px);
+    }
+    &__staff-pick {
+        padding-top: 1.5rem;
+
+        color: $black-color-text;
+        font-family: $forum;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4rem; /* 200% */
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+    }
+    &__hr {
+        width: 6rem;
+        border-top: 1px solid $second-color;
+        margin-bottom: 1.7rem;
+    }
+    &__title {
+        color: $black-color-text;
+        font-size: 1.7rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 4rem; /* 266.667% */
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
+    &__author {
+        margin-bottom: 1.5rem;
+        color: $black-color-text;
+        font-family: $inter;
+        font-size: 1.7rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 4rem;
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+    }
+    &__description {
+        padding-right: 17.5rem;
+        color: $black-color-text;
+        font-family: $inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4rem; /* 266.667% */
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+        margin-bottom: 1.5rem;
+    }
+    &__btn {
+        position: absolute;
+        top: calc(100% - 5rem);
+        padding: 0.9rem 2.7rem;
+        border-radius: 2px;
+        border: 1px solid $main-black-color;
+    }
+    &__btn_active {
+        color: $second-color;
+        border-color: $second-color;
+        background: $main-white-color;
+    }
+}
+.books {
+    &_summer {
+        display: flex;
+    }
+    &_winter {
+        display: flex;
+    }
+    &_spring {
+        display: flex;
+    }
+    &_autumn {
+        display: flex;
+    }
+}
+.active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.btn {
+    cursor: pointer;
+    background: $main-white-color;
+    transition: all 0.5s;
+}
+.btn:hover {
+    background-color: $second-color;
+    border-color: $second-color;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .container {
+        max-width: 768px;
+    }
+
+    .nav {
+        &__content {
+            position: relative;
+        }
+        z-index: 1;
+    }
+}
