@@ -1,1 +1,2 @@
-console.log('test')
+import { App } from "../../js/app";
+App();
