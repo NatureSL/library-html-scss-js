@@ -1,0 +1,29 @@
+.title {
+    &__text {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        color: $main-black-color;
+        font-family: $forum;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 4rem; /* 100% */
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+    }
+    &__hr {
+        margin: 0 auto;
+        max-width: 5rem;
+        border-top: 1px solid $main-black-color;
+    }
+}
+
+.description-text {
+    color: $black-color-text;
+    font-family: $inter;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 4rem;
+}

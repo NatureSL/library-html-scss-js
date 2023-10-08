@@ -1,94 +1,72 @@
 const path = require('path');
-const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = {
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        clean: true,
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { merge } = require('webpack-merge');
+
+const baseConfig = {
+    entry: {
+        index: './src/pages/index.js',
     },
-    devtool: 'source-map',
-    devServer: {
-        static: {
-            directory: path.join(__dirname, 'dist'),
-        },
-        watchFiles: {
-            paths: ['src/**/*.*'],
-            options: {
-                usePolling: true,
-            },
-        },
-        port: 3000,
-        open: {
-            app: {
-                name: 'Google Chrome',
-            },
-        },
-        hot: true,
-        compress: true,
-        // rewrite rules
-        historyApiFallback: {
-            rewrites: [
-                { from: /^\/$/, to: '/index.html' },
-                { from: /./, to: '/404.html' },
-            ],
+    output: {
+        filename: '[name].js',
+        chunkFilename: '[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'src/pages/index.html',
+            filename: 'index.html',
+        }),
+        new CleanWebpackPlugin(),
+    ],
+    optimization: {
+        splitChunks: {
+            name: 'common',
+            chunks: 'all',
         },
     },
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: ['css-loader', 'postcss-loader', 'sass-loader'],
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
+                test: /\.html$/i,
+                use: 'html-loader',
+            },
+            {
+                test: /\.s[ac]ss$/i,
                 use: [
+                    'style-loader',
+                    'css-loader',
                     {
-                        loader: 'babel-loader',
+                        loader: 'sass-loader',
                         options: {
-                            presets: ['@babel/preset-env'],
+                            sassOptions: {
+                                indentWidth: 4,
+                                includePaths: ['absolute/path/a', 'absolute/path/b'],
+                            },
                         },
                     },
                 ],
             },
             {
-                test: /\.(png|jpe?g|webp|ico|svg)$/,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
-                generator: {
-                    filename: 'assets/img/[name].[hash:8][ext]',
-                },
-            },
-            {
-                test: /\.(ttf|woff2?)$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/fonts/[name].[hash:8][ext]',
-                },
             },
         ],
     },
-    plugins: [
-        new HtmlBundlerPlugin({
-            entry: {
-                index: 'src/pages/home/index.html',
-                404: 'src/pages/404.html',
-            },
-            js: {
-                filename: 'assets/js/[name].[contenthash:8].js',
-            },
-            css: {
-                filename: 'assets/css/[name].[contenthash:8].css',
-            },
-            
-        }),
-            new CopyWebpackPlugin({
-              patterns: [
-                  {
-                      from: path.resolve(__dirname, 'src', 'assets'),
-                      to: path.resolve(__dirname, 'dist', 'assets'),
-                  },
-              ],
-          }),
-    ],
+    resolve: {
+        extensions: ['.cjs','.js'],
+    },
+};
+
+module.exports = ({}, { mode }) => {
+    const isProductionMode = mode === 'development';
+    const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
+
+    return merge(baseConfig, envConfig);
 };
