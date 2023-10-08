@@ -1,0 +1,86 @@
+.nav {
+    background-color: $main-black-color;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 9rem;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        column-gap: 4rem;
+    }
+
+    &__logo {
+        text-decoration: none;
+        color: $main-white-color;
+        text-align: center;
+        font-family: $forum;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 5rem; /* 166.667% */
+        letter-spacing: 0.06rem;
+    }
+
+    &__icon {
+        cursor: pointer;
+        padding: 0rem;
+        width: 28px;
+        height: 28px;
+    }
+}
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 4rem;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 3rem;
+    }
+
+    &__list-item {
+        & a {
+            font-size: 2rem;
+            font-family: $inter;
+            color: $main-white-color;
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 5rem; /* 250% */
+        }
+    }
+    &__link:after {
+        display: block;
+        position: relative;
+        right: -100%;
+        top: 0.5rem;
+        width: 0;
+        height: 0.2rem;
+        background-color: $main-white-color;
+        content: '';
+        transition: all 0.5s ease-out;
+        transform: rotate(180deg); /* Поворачиваем псевдоэлемент на 45 градусов */
+        transform-origin: left; /* Устанавливаем точку, относительно которой происходит поворот */
+    }
+    &__link:hover::after {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav {
+        &__content {
+            position: relative;
+        }
+        z-index: 1;
+    }
+}
