@@ -1,14 +1,3 @@
-@import './abstract/normalize';
-@import './abstract/fonts';
-@import './abstract/constants';
-@import './abstract/mixin';
-@import './abstract/placeholder';
-
-/**
-*   BASE
-*/
-@import './base/swiper-slider.scss';
-
 * {
     padding: 0;
     margin: 0;
@@ -30,4 +19,10 @@ html {
     max-width: $container-max-width;
     margin: 0 auto;
     padding: 0 2rem;
-  }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
