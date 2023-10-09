@@ -1,0 +1,77 @@
+.coffee-shop-section {
+    &__title {
+        margin-bottom: 4rem;
+    }
+    &__text {
+        margin-bottom: 4rem;
+        text-align: center;
+        font-family: $inter;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 200% */
+        letter-spacing: 2px;
+    }
+}
+.shop-menu {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+    }
+    &__list-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+    &__list-wrapper_right {
+        align-items: flex-end;
+    }
+    &__title {
+        color: $second-color;
+        font-family: $forum;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 100% */
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+    }
+}
+.item {
+    &__box {
+        display: flex;
+        align-items: center;
+        column-gap: 6rem;
+    }
+    &__title {
+        min-width: 19.6rem;
+        color: $black-color-text;
+        font-family: $inter;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 200% */
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+    &__title_right {
+        text-align: right;
+    }
+    &__cost {
+        color: $black-color-text;
+        font-family: $forum;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 200% */
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+    &__hr {
+        height: 0.1rem;
+        width: 10rem;
+        background: $second-color;
+    }
+}
