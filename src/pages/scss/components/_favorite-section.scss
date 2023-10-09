@@ -16,8 +16,7 @@
     row-gap: 4rem;
     flex-wrap: wrap;
     margin-bottom: 4rem;
-    max-width: 100%;
-    visibility: hidden;
+
 }
 input[type='radio'] {
     accent-color: $main-black-color;
@@ -136,16 +135,16 @@ input[type='radio'] {
 }
 .books {
     &_summer {
-        display: flex;
+        display: none;
     }
     &_winter {
         display: flex;
     }
     &_spring {
-        display: flex;
+        display: none;
     }
     &_autumn {
-        display: flex;
+        display: none;
     }
 }
 .active {
