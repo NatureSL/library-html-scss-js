@@ -1,0 +1,67 @@
+.library-card-section {
+    &__title {
+      margin-bottom: 4rem;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__unlogin {
+      display: block;
+    }
+    &__login {
+      display: none;
+    }
+  }
+  
+  .card-info {
+    &__title {
+      margin-bottom: 3rem;
+      text-align: center;
+      color: $black-color-text;
+      font-family: $inter;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.6px;
+    }
+  }
+  
+  .get-card-profile {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+    &__title {
+      margin-bottom: 3.5rem;
+      color: $black-color-text;
+      text-align: center;
+      font-family: $forum;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.06rem;
+    }
+    &__text {
+      margin-bottom: 3.5rem;
+      color: $black-color-text;
+      text-align: right;
+      font-family: $inter;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 4rem; /* 200% */
+      letter-spacing: 0.04rem;
+    }
+    &__auth {
+      display: flex;
+      column-gap: 2rem;
+    }
+    &__btn {
+      background-color: $main-white-color;
+      padding: 1rem 1.5rem;
+    }
+  }
