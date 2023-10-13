@@ -1,3 +1,74 @@
 .footer {
-
+    background: $main-black-color;
+    color: $main-white-color;
+    &__content {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__work-time {
+        color: $main-white-color;
+        text-align: right;
+        font-family: $inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__address {
+        color: $main-white-color;
+        font-family: $inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem; /* 133.333% */
+        margin-bottom: 1rem;
+    }
+    &__social-icons {
+        margin-bottom: 3rem;
+    }
+    &__hr {
+        margin-bottom: 4rem;
+    }
+    &__rss {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4rem;
+    }
+    &__year {
+        color: $main-white-color;
+        text-align: center;
+        font-family: $inter;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 200% */
+        letter-spacing: 2px;
+    }
+    &__name-rss {
+        text-decoration: none;
+        color: $main-white-color;
+        text-align: center;
+        font-family: $inter;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 200% */
+        letter-spacing: 2px;
+    }
+    &__myname {
+        text-decoration: none;
+        color: $main-white-color;
+        text-align: center;
+        font-family: $inter;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 200% */
+        letter-spacing: 2px;
+    }
 }
