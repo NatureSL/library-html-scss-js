@@ -1,0 +1,175 @@
+@mixin form() {
+    &__form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  
+    &__form-field-name {
+      color: #000;
+      font-family: $inter;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2rem; /* 133.333% */
+      letter-spacing: 0.03rem;
+      margin-bottom: 1rem;
+    }
+    &__form-field {
+      padding: 0 1rem;
+  
+      margin-bottom: 1rem;
+      border: 1px solid #bb945f;
+      &:last-of-type {
+        margin-bottom: 2rem;
+      }
+    }
+    &__other-info {
+      display: flex;
+      flex-direction: row;
+      column-gap: 1rem;
+      align-self: start;
+      color: #000;
+      text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+      font-family: Inter;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &__other-link {
+      color: #0c0c0e;
+      text-align: center;
+      font-family: Inter;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.1rem;
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
+    &__btn {
+      align-self: self-start;
+      padding: 0.9rem 2rem;
+      background-color: #fff;
+      color: $main-black-color;
+      text-align: center;
+      font-family: $inter;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.1rem;
+    }
+  }
+@mixin modal-overlay($display-value: none) {
+    display: $display-value;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+  }
+  @mixin modal($display-value: none) {
+    @include modal-overlay($display-value);
+    &__container {
+      max-width: 100%;
+      max-height: 100%;
+      background-color: #fff;
+      padding: 2rem 2.5rem;
+      position: relative;
+      overflow: auto;
+
+    }
+  
+    &__title {
+      color: #000;
+      text-align: center;
+      font-family: Forum;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2rem; /* 100% */
+      letter-spacing: 0.04rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    @include form();
+    @include close-btn(1.5rem, 1.5rem, 1.5rem, 1.5rem, 6);
+    /* Дополнительные стили для модального окна */
+  }
+  
+.modal-buy {
+    @include modal-overlay($display-value: none);
+    &__container {
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+    }
+  
+    &__title {
+      background-color: $main-black-color;
+      padding: 2rem 0;
+      color: #fff;
+      text-align: center;
+      font-family: $forum;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2rem; /* 50% */
+      letter-spacing: 0.08rem;
+      text-transform: uppercase;
+    }
+    &__content {
+      background: white;
+      display: flex;
+      padding: 3rem 4rem 0 4rem;
+      column-gap: 4rem;
+    }
+    @include form();
+    @include close-btn(1.5rem, 1.5rem, 1.5rem, 1.5rem, 6);
+    &__exporation-code {
+      display: flex;
+      column-gap: 1rem;
+    }
+    &__small-field {
+      width: 4.5rem;
+  
+      &:last-of-type {
+        margin-bottom: 1rem;
+      }
+    }
+    &__text-wrapper {
+      max-width: 33rem;
+      p {
+        color: #8e8e8e;
+        font-family: $inter;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem; /* 133.333% */
+        letter-spacing: 0.2rem;
+      }
+    }
+    &__cost {
+      display: flex;
+      column-gap: 2.5rem;
+      align-items: center;
+      
+      color: $main-black-color;
+      font-family: $inter;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2rem; /* 100% */
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+    }
+  }

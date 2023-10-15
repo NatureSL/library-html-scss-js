@@ -746,6 +746,119 @@
               </div>
             </footer>
         </div>
+        <div class="modal">
+          <!-- Notification -->
+          <div class="notification">
+            <div class="notification__container">
+              <span class="notification__message"></span>
+            </div>
+          </div>
+          <!-- MODALS  -->
+          <div class="modal-buy">
+            <div class="modal-buy__container">
+              <div class="modal-buy__close-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                >
+                  <path d="M2 16.8507L17 2" stroke="white" stroke-width="3" />
+                  <path d="M2 2.14929L17 17" stroke="white" stroke-width="3" />
+                </svg>
+              </div>
+              <h3 class="modal-buy__title">Buy a library card</h3>
+              <div class="modal-buy__content">
+                <div class="modal-buy__form">
+                  <form class="modal-buy__form">
+                    <label class="modal-buy__form-field-name" for="bankCard"
+                      >Bank card number</label
+                    >
+                    <input
+                      class="modal-buy__form-field"
+                      type="text"
+                      id="bankCard"
+                      name="bankCard"
+                      required
+                    />
+    
+                    <label class="modal-buy__form-field-name" for="expirationCode"
+                      >Expiration code</label
+                    >
+                    <div class="modal-buy__expiration-code">
+                      <input
+                        class="modal-buy__form-field modal-buy__small-field"
+                        type="text"
+                        id="expirationCode"
+                        name="expirationCode"
+                        required
+                      />
+                      <input
+                        class="modal-buy__form-field modal-buy__small-field"
+                        type="text"
+                        id="expirationCode1"
+                        name="expirationCode1"
+                        required
+                      />
+                    </div>
+                    <label class="modal-buy__form-field-name" for="cvc">CVC</label>
+                    <input
+                      class="modal-buy__form-field modal-buy__small-field"
+                      type="password"
+                      maxlength="3"
+                      id="cvc"
+                      name="cvc"
+                      required
+                    />
+                    <label class="modal-buy__form-field-name" for="cardholderName"
+                      >Cardholder name</label
+                    >
+                    <input
+                      class="modal-buy__form-field"
+                      type="text"
+                      id="cardholderName"
+                      name="cardholderName"
+                      required
+                    />
+                    <label class="modal-buy__form-field-name" for="postalCode"
+                      >Postal code</label
+                    >
+                    <input
+                      class="modal-buy__form-field"
+                      type="text"
+                      id="postalCode"
+                      name="postalCode"
+                      required
+                    />
+                    <label class="modal-buy__form-field-name" for="city"
+                      >City / Town</label
+                    >
+                    <input
+                      class="modal-buy__form-field"
+                      type="text"
+                      id="city"
+                      name="city"
+                      required
+                    />
+                    <div class="modal-buy__cost">
+                      <button class="modal-buy__btn btn" type="submit">Buy</button>
+                      <span>$ 25.00</span>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-buy__text-wrapper">
+                  <p>
+                    If you are live, work, attend school, or pay property taxes in
+                    New York State, you can get a $25 digital library card right now
+                    using this online form. Visitors to New York State can also use
+                    this form to apply for a temporary card.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     </body>
 </html>
